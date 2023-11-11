@@ -243,14 +243,14 @@ public class Calculator {
                             throw new IllegalArgumentException();
                         }
                         System.out.println("Enter preferred bits: (zero or empty line to get minimum bits)");
-                        line = reader.readLine();
+                        String bits = reader.readLine();
                         int preferredBits;
-                        if (line.isEmpty()) {
+                        if (bits.isEmpty()) {
                             preferredBits = 0;
                         } else {
-                            preferredBits = Integer.parseInt(line);
+                            preferredBits = Integer.parseInt(bits);
                         }
-                        if (line.isEmpty() || preferredBits == 0) {
+                        if (preferredBits == 0) {
                             System.out.println("Binary of " + line + " with minimum bits is equal to " + calculatorFunctions.convertHexadecimalToBinaryTwoComp(line, preferredBits));
                         } else {
                             System.out.println();
